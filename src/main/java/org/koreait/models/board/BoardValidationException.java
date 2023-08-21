@@ -9,6 +9,6 @@ import org.springframework.http.HttpStatus;
  */
 public class BoardValidationException extends CommonException {
     public BoardValidationException(String message) {
-        super(message, HttpStatus.BAD_REQUEST); // 400번대 오류 코드
+        super(message, HttpStatus.BAD_REQUEST); // 400
     }
 }

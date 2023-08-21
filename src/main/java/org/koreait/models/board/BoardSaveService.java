@@ -11,7 +11,7 @@ import org.springframework.validation.Errors;
  * 게시글 저장 서비스
  *
  */
-@Service("BoardSaveService")
+@Service
 @RequiredArgsConstructor
 public class BoardSaveService {
 
@@ -44,5 +44,7 @@ public class BoardSaveService {
         }
 
         repository.saveAndFlush(boardData);
+
+        boardForm.setId(boardData.getId());
     }
 }

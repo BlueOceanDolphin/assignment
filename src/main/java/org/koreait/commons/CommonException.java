@@ -10,8 +10,8 @@ public class CommonException extends RuntimeException {
         this.status = status;
     }
 
-    public CommonException(String message){
-        this(message, HttpStatus.INTERNAL_SERVER_ERROR); // 오류 코드 500
+    public CommonException(String message) {
+        this(message, HttpStatus.INTERNAL_SERVER_ERROR); // 500
     }
 
     public HttpStatus getStatus() {
