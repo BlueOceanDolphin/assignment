@@ -12,8 +12,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import static org.koreait.commons.libs.JavaScript.alertBack;
 
@@ -102,4 +107,28 @@ public class BoardController {
         model.addAttribute("scripts", alertBack(e.getMessage()));
         return "commons/execute_script";
     }
+
+    /*@RequestMapping("/upload/file")
+    public String fileUpload(@RequestParam("uploadFile")ArrayList<MultipartFile> files, Model model) throws IOException {
+        String saveFileName = "";
+
+        String uploadPath = "C:\\uploads";
+
+        ArrayList<String> originalFileNameList = new ArrayList<>();
+        for (MultipartFile file : files) {
+            String originalFileName = file.getOriginalFilename();
+
+            originalFileNameList.add(originalFileName);
+
+            UUID uuid = UUID.randomUUID();
+            saveFileName = uuid.toString() + "_" + originalFileName;
+
+            File file1 = new File(uploadPath + saveFileName);
+
+            file.transferTo(file1);
+        }
+        model.addAttribute("originalFileNameList", originalFileNameList);
+        return "upload/fileUpload";
+
+    }*/
 }

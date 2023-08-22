@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.koreait.commons.rests.JSONData;
 import org.koreait.controllers.BoardForm;
 import org.koreait.entities.BoardData;
+import org.koreait.models.board.BoardDeleteService;
 import org.koreait.models.board.BoardInfoService;
 import org.koreait.models.board.BoardSaveService;
 import org.springframework.http.HttpStatus;
@@ -45,4 +46,5 @@ public class BoardController {
 
         return ResponseEntity.ok(data);
     }
+
 }
