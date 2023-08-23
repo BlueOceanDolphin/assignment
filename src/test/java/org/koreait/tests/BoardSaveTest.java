@@ -35,7 +35,7 @@ public class BoardSaveTest {
 
     @Test
     @DisplayName("작성 성공시 상태코드 201로 응답")
-    void WriteSuccessTest() throws Exception {
+    void Test1() throws Exception {
 
         BoardForm boardForm = BoardForm.builder()
                                 .subject("제목")
@@ -54,7 +54,7 @@ public class BoardSaveTest {
 
     @Test
     @DisplayName("유효성 검사 - 제목 누락시 응답 코드는 400, message에 제목 포함")
-    void WriteTest() throws Exception {
+    void Test2() throws Exception {
         BoardForm boardForm = BoardForm.builder()
                         .content("내용").build();
 
